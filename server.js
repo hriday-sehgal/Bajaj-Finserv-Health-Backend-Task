@@ -6,12 +6,11 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests only from this origin
+    origin: 'https://bajajfinservhealthhridaysehgal.onrender.com', // Allow requests only from the deployed frontend
     methods: 'GET,POST', // Allow these HTTP methods
     allowedHeaders: 'Content-Type,Authorization', // Allow these headers
     credentials: true // Allow credentials (if needed)
 }));
-
 
 app.post('/bfhl', (req, res) => {
     const { data } = req.body;
